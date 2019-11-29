@@ -5,10 +5,16 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmennis/docker-crud-api"
   },
-  "author": "",
+  "scripts": {
+    "test": "docker-compose -f docker/docker-compose.test.yml up --build --abort-on-container-exit",
+    "build": "docker-compose -f docker/docker-compose.yml build",
+    "production": "docker-compose -f docker/docker-componse.yml up -d"
+  },
+  "author": "Mike Mennis",
   "license": "ISC",
   "description": "",
   "dependencies": {
