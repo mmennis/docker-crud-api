@@ -6,8 +6,7 @@ const dbName = process.env.NODE_ENV === 'dev' ? 'database-test' : 'database';
 const url = `mongodb://${process.env.MONGO_INITDB_ROOT_USERNAME}:${process.env.MONGO_INITDB_ROOT_PASSWORD}@${dbName}:27017?authMechanism=SCRAM-SHA-1&authSource=admin`
 const options = {
     useNewUrlParser: true,
-    reconnectTries: 60,
-    reconnectInterval: 1000
+    useUnifiedTopology: true
 }
 
 const routes = require('./routes/routes');
@@ -34,3 +33,5 @@ MongoClient.connect(url, options, (err, database) => {
     })
 
 });
+
+module.exports = app;

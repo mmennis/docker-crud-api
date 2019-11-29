@@ -32,7 +32,7 @@ router.get('/documents/:id', (req, res, next) => {
 });
 
 router.post('/documents', (req, res, next) => {
-    const newDocument = new Document(req.body.title, req,body.username, req.body.body);
+    const newDocument = new Document(req.body.title, req.body.username, req.body.body);
     req.app.locals.db.collection('documents').insertOne({
         newDocument
     }, (err, result) => {
