@@ -1,4 +1,4 @@
-FROM docker_backend
+FROM docker-crud-api
 ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait wait
 RUN chmod +x /wait
 RUN NODE_ENV dev
