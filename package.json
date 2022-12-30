@@ -23,7 +23,7 @@
     "mongodb": "^3.3.5"
   },
   "devDependencies": {
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "supertest": "^4.0.2",
     "tape": "^4.11.0"
   }
